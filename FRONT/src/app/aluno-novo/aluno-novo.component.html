@@ -1,0 +1,40 @@
+<div class="container">
+  <mat-card-title>Alunos</mat-card-title>
+  <br>
+  <mat-card-subtitle><br>Cadastrar</mat-card-subtitle>
+  <mat-divider></mat-divider>
+  <br>
+
+  <div class="input1">
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput id="nome" name="nome" required [(ngModel)]="aluno.nome">
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="input2">
+    <mat-form-field appearance="outline">
+      <mat-label>Sexo</mat-label>
+      <input matInput id="sexo" name="sexo" maxlength="1" required [(ngModel)]="aluno.sexo">
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="input2">
+    <mat-form-field appearance="outline">
+      <mat-label>Data de Nascimento</mat-label>
+      <input matInput id="dt_nasc" name="dt_nasc" type="date" required [(ngModel)]="aluno.dt_nasc">
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="botoes-container">
+    <div class="btn" (click)="inserirAluno()">
+      Salvar <span class="material-icons">save</span>
+    </div>
+    <div class="btn" (click)="cancelar()">
+      Cancelar <span class="material-icons">cancel</span>
+    </div>
+  </div>
+</div>
